@@ -1,0 +1,237 @@
+/* FONTS */
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("fonts/BebasNeue-Regular.woff") format("woff"); }
+/* COLORS */
+/* GRID */
+/* HELPERS */
+/* line 49, tragic-test.scss */
+.hidden, .backgrounded > img, .backgrounded-bottom > img {
+  display: none !important;
+  visibility: hidden; }
+
+/* line 54, tragic-test.scss */
+.split, .left, .right, .h-center, .v-center {
+  display: flex; }
+
+/* line 58, tragic-test.scss */
+.split {
+  justify-content: space-between; }
+
+/* line 63, tragic-test.scss */
+.left {
+  justify-content: flex-start; }
+
+/* line 68, tragic-test.scss */
+.right {
+  justify-content: flex-end; }
+
+/* line 73, tragic-test.scss */
+.h-center {
+  justify-content: center; }
+
+/* line 78, tragic-test.scss */
+.v-center {
+  align-items: center; }
+
+/* line 83, tragic-test.scss */
+.backgrounded, .backgrounded-bottom {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+/* line 98, tragic-test.scss */
+.backgrounded-bottom {
+  background-position: bottom; }
+
+/* line 107, tragic-test.scss */
+.secondary-font {
+  font-family: "Bebas Neue"; }
+
+/* line 111, tragic-test.scss */
+.dark-text {
+  color: #2D2D2D; }
+
+/* line 115, tragic-test.scss */
+.light-text {
+  color: #FFFFFF; }
+
+/* line 119, tragic-test.scss */
+.highlight-text {
+  color: #DE1D3E; }
+
+/* line 123, tragic-test.scss */
+.dark-background {
+  background: #2D2D2D; }
+
+/* line 127, tragic-test.scss */
+.light-background {
+  background: #FFFFFF; }
+
+/* line 131, tragic-test.scss */
+.highlight-background {
+  background: #DE1D3E; }
+
+/* DEFAULTS */
+/* line 137, tragic-test.scss */
+header, footer, section, div, header a {
+  display: block;
+  box-sizing: border-box; }
+
+/* line 142, tragic-test.scss */
+html, body, ul, ol {
+  padding: 0;
+  margin: 0; }
+
+/* line 151, tragic-test.scss */
+header a {
+  color: inherit;
+  text-decoration: none; }
+
+/* line 157, tragic-test.scss */
+body {
+  background: #4B4B4B;
+  color: #F6F6F6;
+  font-size: 18px;
+  font-family: "Montserrat";
+  font-weight: 400; }
+
+/* line 165, tragic-test.scss */
+.container {
+  max-width: 1170px;
+  margin: 0 auto; }
+  /* line 168, tragic-test.scss */
+  .container-fluid {
+    margin: 0;
+    max-width: 100%; }
+  /* line 172, tragic-test.scss */
+  .container .row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; }
+  /* line 179, tragic-test.scss */
+  .container [class*="col"] {
+    flex-direction: column; }
+  /* line 40, tragic-test.scss */
+  .container .col-mob-1 {
+    flex-basis: 8.3333333333%; }
+  /* line 40, tragic-test.scss */
+  .container .col-mob-2 {
+    flex-basis: 16.6666666667%; }
+  /* line 40, tragic-test.scss */
+  .container .col-mob-3 {
+    flex-basis: 25%; }
+  /* line 40, tragic-test.scss */
+  .container .col-mob-4 {
+    flex-basis: 33.3333333333%; }
+  /* line 40, tragic-test.scss */
+  .container .col-mob-5 {
+    flex-basis: 41.6666666667%; }
+  /* line 40, tragic-test.scss */
+  .container .col-mob-6 {
+    flex-basis: 50%; }
+  /* line 40, tragic-test.scss */
+  .container .col-mob-7 {
+    flex-basis: 58.3333333333%; }
+  /* line 40, tragic-test.scss */
+  .container .col-mob-8 {
+    flex-basis: 66.6666666667%; }
+  /* line 40, tragic-test.scss */
+  .container .col-mob-9 {
+    flex-basis: 75%; }
+  /* line 40, tragic-test.scss */
+  .container .col-mob-10 {
+    flex-basis: 83.3333333333%; }
+  /* line 40, tragic-test.scss */
+  .container .col-mob-11 {
+    flex-basis: 91.6666666667%; }
+  /* line 40, tragic-test.scss */
+  .container .col-mob-12 {
+    flex-basis: 100%; }
+  @media screen and (min-width: 600px) {
+    /* line 40, tragic-test.scss */
+    .container .col-tab-1 {
+      flex-basis: 8.3333333333%; }
+    /* line 40, tragic-test.scss */
+    .container .col-tab-2 {
+      flex-basis: 16.6666666667%; }
+    /* line 40, tragic-test.scss */
+    .container .col-tab-3 {
+      flex-basis: 25%; }
+    /* line 40, tragic-test.scss */
+    .container .col-tab-4 {
+      flex-basis: 33.3333333333%; }
+    /* line 40, tragic-test.scss */
+    .container .col-tab-5 {
+      flex-basis: 41.6666666667%; }
+    /* line 40, tragic-test.scss */
+    .container .col-tab-6 {
+      flex-basis: 50%; }
+    /* line 40, tragic-test.scss */
+    .container .col-tab-7 {
+      flex-basis: 58.3333333333%; }
+    /* line 40, tragic-test.scss */
+    .container .col-tab-8 {
+      flex-basis: 66.6666666667%; }
+    /* line 40, tragic-test.scss */
+    .container .col-tab-9 {
+      flex-basis: 75%; }
+    /* line 40, tragic-test.scss */
+    .container .col-tab-10 {
+      flex-basis: 83.3333333333%; }
+    /* line 40, tragic-test.scss */
+    .container .col-tab-11 {
+      flex-basis: 91.6666666667%; }
+    /* line 40, tragic-test.scss */
+    .container .col-tab-12 {
+      flex-basis: 100%; } }
+  @media screen and (min-width: 900px) {
+    /* line 40, tragic-test.scss */
+    .container .col-desk-1 {
+      flex-basis: 8.3333333333%; }
+    /* line 40, tragic-test.scss */
+    .container .col-desk-2 {
+      flex-basis: 16.6666666667%; }
+    /* line 40, tragic-test.scss */
+    .container .col-desk-3 {
+      flex-basis: 25%; }
+    /* line 40, tragic-test.scss */
+    .container .col-desk-4 {
+      flex-basis: 33.3333333333%; }
+    /* line 40, tragic-test.scss */
+    .container .col-desk-5 {
+      flex-basis: 41.6666666667%; }
+    /* line 40, tragic-test.scss */
+    .container .col-desk-6 {
+      flex-basis: 50%; }
+    /* line 40, tragic-test.scss */
+    .container .col-desk-7 {
+      flex-basis: 58.3333333333%; }
+    /* line 40, tragic-test.scss */
+    .container .col-desk-8 {
+      flex-basis: 66.6666666667%; }
+    /* line 40, tragic-test.scss */
+    .container .col-desk-9 {
+      flex-basis: 75%; }
+    /* line 40, tragic-test.scss */
+    .container .col-desk-10 {
+      flex-basis: 83.3333333333%; }
+    /* line 40, tragic-test.scss */
+    .container .col-desk-11 {
+      flex-basis: 91.6666666667%; }
+    /* line 40, tragic-test.scss */
+    .container .col-desk-12 {
+      flex-basis: 100%; } }
+
+/* HEADER LOGO & NAVIGATION */
+/* line 2, _tragic-header.scss */
+header .navigation {
+  height: 90px; }
+
+/* HEADER CONTACT */
+/* line 5, _tragic-header.scss */
+header .contact {
+  height: 50px; }
+
+/*# sourceMappingURL=tragic-test.css.map */
