@@ -8,39 +8,47 @@
     <meta name="author" content="Ron Lipps">
     <link rel="stylesheet" href="css/tragic-test.css?v=1.0">
 </head>
-<body>
+<body onload="backgrounder(); customResponse(true);" onresize="customResponse()">
     
-    <header class="dark-background">
+    <header class="dark-background" data-device="">
+        
         <div class="container">
             <div class="row navigation split">
-                <div class="col-desk-3 light-text">
+                <div class="col-desk-3 col-tab-6 col-mob-8 light-text">
                     <div id="header_logo">
                         <a href="/"><img src="img/sdsa-logo.png" alt="San Diego Sports Accupuncture Logo" /></a>
                     </div>
                 </div>
-                <nav class="col-desk-7 light_text h-center">
-                    <div class="row split">
+                <div class="col-desk-9 col-tab-3 col-mob-4">
+                    
+                    <nav class="light-text v-center right">
                         <a href="/">Why SDSA</a>
                         <a href="/">Practitioners</a>
                         <a href="/">FAQs</a>
                         <a href="/">Testimonials</a>
                         <a href="/">Blog</a>
                         <a href="/">Contact</a>
-                    </div>
-                </nav>
-            </div>
-            <div class="fluid row contact highlight-text right">
-                <a href="tel:+1-858-255-8070" id="header_phone" class="fixed col">858-255-8070</a>
-                <a href="https://maps.google.com/maps?daddr=5465 Morehouse Dr. Ste 100" id="header_address" class="fixed col">5465 Morehouse Dr. Ste 100</a>
-                <a href="/" id="header_cta" class="fixed col">Schedule Appointment</a>
+                    </nav>
+                </div>
             </div>
         </div>
+            
+        <div class="container">
+            <div class="row contact highlight-text v-center right">
+                <a href="tel:+1-858-255-8070" id="header_phone" class="fixed col">858-255-8070</a>
+                <a href="https://maps.google.com/maps?daddr=5465 Morehouse Dr. Ste 100" target="_blank" id="header_address" class="fixed col">5465 Morehouse Dr. Ste 100</a>
+                <a href="/" id="header_cta" class="fixed col">Schedule Appointment</a>
+            </div> 
+        </div>
+            
     </header>
     
-    <section id="main_hero" class="row light-text backgrounded">
-        <div class="container">
-            <h1>NO MATTER WHAT YOUR SPORT OR AGE,<br> WE KEEP YOU PERFOMRING AT <span class="highlight-background">YOUR BEST.</span></h1>
-            <div class="nav-down"></div>
+    <section id="main_hero" class="row light-text backgrounded-bottom" data-device="">
+        <div class="container col-mob-12">
+            
+            <h1><span>NO MATTER WHAT</span> <span>YOUR SPORT OR AGE,</span><br><span>WE KEEP YOU PERFOMRING</span> <span>AT <span class="highlight-background">YOUR BEST.</span></span></h1>
+            <div class="arrow-down"></div>
+            
         </div>
         <img src="img/sdsa-banner.jpg" />
     </section>
