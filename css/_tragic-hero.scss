@@ -9,11 +9,14 @@
 
 #main_hero .container {
     height: 100%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     
     & #arrow-down{
+        width: 40px;
+        height:80px;
         position: absolute;
         right: calc(50% - 20px);
         bottom: 30px;
@@ -66,6 +69,11 @@
         & > br {
             display:none;
         }
+    }
+    
+    & #arrow-down{
+        bottom: 15px;
+        transform: scale(0.75);
     }
 }
 
