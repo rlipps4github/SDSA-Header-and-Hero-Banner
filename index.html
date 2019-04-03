@@ -3,47 +3,53 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://tragic.media/favicon.ico">
     <title>Tragic Test</title>
     <meta name="description" content="Tragic Media Test Site">
     <meta name="author" content="Ron Lipps">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/tragic-test.css?v=1.0">
 </head>
-<body onload="backgrounder(); customResponse(true);" onresize="customResponse()">
+<body onload="initTheme()" onresize="customResponse()">
     
-    <header class="dark-background" data-device="">
+    <header class="dark-background" data-device="mobile">
         
         <div class="container">
-            <div class="row navigation split">
-                <div class="col-desk-3 col-tab-6 col-mob-8 light-text">
+            <div id="navigation" class="row split">
+                <div class="col-desk-4 col-tab-8 col-mob-8 light-text">
                     <div id="header_logo">
-                        <a href="/"><img src="img/sdsa-logo.png" alt="San Diego Sports Accupuncture Logo" /></a>
+                        <a href="javascript:;"><img src="img/sdsa-logo.png" alt="San Diego Sports Accupuncture Logo" /></a>
                     </div>
                 </div>
-                <div class="col-desk-9 col-tab-3 col-mob-4">
-                    
-                    <nav class="light-text v-center right">
-                        <a href="/">Why SDSA</a>
-                        <a href="/">Practitioners</a>
-                        <a href="/">FAQs</a>
-                        <a href="/">Testimonials</a>
-                        <a href="/">Blog</a>
-                        <a href="/">Contact</a>
+                <div class="col-desk-8 col-tab-2 col-mob-2 light-text">
+                    <button type="button"><span></span><span></span><span></span></button>
+                    <nav class="v-center right">
+                        <a href="javascript:;">Why SDSA</a>
+                        <a href="javascript:;">Practitioners</a>
+                        <a href="javascript:;">FAQs</a>
+                        <a href="javascript:;">Testimonials</a>
+                        <a href="javascript:;">Blog</a>
+                        <a href="javascript:;">Contact</a>
                     </nav>
                 </div>
             </div>
         </div>
             
         <div class="container">
-            <div class="row contact highlight-text v-center right">
-                <a href="tel:+1-858-255-8070" id="header_phone" class="fixed col">858-255-8070</a>
-                <a href="https://maps.google.com/maps?daddr=5465 Morehouse Dr. Ste 100" target="_blank" id="header_address" class="fixed col">5465 Morehouse Dr. Ste 100</a>
-                <a href="/" id="header_cta" class="fixed col">Schedule Appointment</a>
+            <div id="contact" class="row highlight-text v-center right">
+                <a href="tel:+1-858-255-8070" data-alt="CALL"><i class="fa fa-phone"></i>858-255-8070</a>
+                <div class="sep"></div>
+                <a href="https://maps.google.com/maps?daddr=5465 Morehouse Dr. Ste 100" target="_blank" data-alt="FIND US"><i class="fa fa-map-marker"></i>5465 Morehouse Dr. Ste 100</a>
+                <div class="sep"></div>
+                <a href="javascript:;" data-alt="APPOINTMENT"><i class="fa fa-calendar"></i>Schedule Appointment</a>
             </div> 
         </div>
             
     </header>
     
-    <section id="main_hero" class="row light-text backgrounded-bottom" data-device="">
+    <section id="main_hero" class="row light-text backgrounded-bottom" data-device="mobile">
         <div class="container col-mob-12">
             
             <h1><span>NO MATTER WHAT</span> <span>YOUR SPORT OR AGE,</span><br><span>WE KEEP YOU PERFOMRING</span> <span>AT <span class="highlight-background">YOUR BEST.</span></span></h1>
