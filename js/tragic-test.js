@@ -1,44 +1,32 @@
 /******************************************
 RESPONSIVE CONTAINER CLASSING
 
-reduces excessive media queries for custom 
-offset or off-grid placements by setting device data
+simplifies styling for custom offset or 
+off-grid placements
 *******************************************/
 
-var responseTimer;
-
-function customResponse(init) {
-    // test for first run
-    init = init || false;
-    let timer = init ? 10 : 150
-    clearTimeout(responseTimer);
-    let deviceSize = ''
+function customResponse() {
     // get lower breakpoints excluding padding
     const deviceArray = {tablet: 992, mobile: 600}
     // get all responsive containers
     const responsiveElements = document.querySelectorAll('[data-device]')
     switch (true) {
         case window.innerWidth > deviceArray['tablet']: 
-            deviceSize = 'desktop'
+            responsiveElements.forEach( (e) => { e.setAttribute('data-device', 'desktop') })
             break
         case window.innerWidth > deviceArray['mobile']:
-            deviceSize = 'tablet'
+            responsiveElements.forEach( (e) => { e.setAttribute('data-device', 'tablet') })
             break
         default:
-            deviceSize = 'mobile'
+            responsiveElements.forEach( (e) => { e.setAttribute('data-device', 'mobile') })
     } 
-    // nice long timeout for performance
-    responseTimer = setTimeout( () =>  { 
-        responsiveElements.forEach( (e) => { 
-            e.setAttribute('data-device', deviceSize)
-        })
-    }, timer);
 }
+
 
 /******************************************
 BACKGROUND IMAGES
 
-operates on html class "backgrounded"
+operates on html class "backgrounded-*"
 and applies direct child image source to it's parents background
 *******************************************/
 
@@ -54,3 +42,43 @@ function backgrounder() {
         }
     })
 }
+
+
+/******************************************
+MOBILE NAV
+
+enable toggle with nav button
+*******************************************/
+
+function mobileNav() {
+    // declare button and nav elements
+    const nav_btn = document.getElementById('navigation').getElementsByTagName('button')[0]
+    const nav_menu = document.getElementById('navigation').getElementsByTagName('nav')[0]
+    // toggle active state on click
+    nav_btn.addEventListener('click', function () {
+        if (this.classList.contains('active')) {
+            // remove if present
+            this.classList.remove('active');
+            nav_menu.classList.remove('active');
+        } else {
+            // else add
+            this.classList.add('active');
+            nav_menu.classList.add('active');
+        }
+    })
+}
+
+
+/******************************************
+    
+        INIT
+
+*******************************************/
+
+function initTheme() {
+    backgrounder()
+    customResponse()
+    mobileNav()
+    document.body.setAttribute('data-loaded','true')
+}
+

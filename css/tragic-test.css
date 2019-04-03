@@ -48,7 +48,7 @@
 
 /* line 111, tragic-test.scss */
 .secondary-font {
-  font-family: "Bebas Neue"; }
+  font-family: "Bebas Neue", Impact, sans-serif; }
 
 /* line 115, tragic-test.scss */
 .dark-text {
@@ -95,25 +95,31 @@ body {
   background: #FFFFFF;
   color: #4B4B4B;
   font-size: 18px;
-  font-family: "Montserrat";
-  font-weight: 400; }
+  font-family: "Montserrat", Verdana, sans-serif;
+  font-weight: 400;
+  opacity: 0;
+  transition: opacity 0.5s; }
 
-/* line 169, tragic-test.scss */
+/* line 171, tragic-test.scss */
+body[data-loaded="true"] {
+  opacity: 1; }
+
+/* line 175, tragic-test.scss */
 .container {
   max-width: 1210px;
   padding: 0 20px;
   margin: 0 auto; }
-  /* line 173, tragic-test.scss */
+  /* line 179, tragic-test.scss */
   .container-fluid {
     margin: 0;
     max-width: 100%; }
-  /* line 177, tragic-test.scss */
+  /* line 183, tragic-test.scss */
   .container .row {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row; }
-  /* line 184, tragic-test.scss */
+  /* line 190, tragic-test.scss */
   .container [class*="col"] {
     flex-direction: column; }
   /* line 44, tragic-test.scss */
@@ -227,42 +233,112 @@ body {
     .container .col-desk-12 {
       width: 100%; } }
 
-/* line 193, tragic-test.scss */
+/* line 199, tragic-test.scss */
 section {
   width: 100%;
   float: left; }
 
-/* line 198, tragic-test.scss */
+/* line 204, tragic-test.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  font-family: "Bebas Neue"; }
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-weight: 400; }
 
-/* line 203, tragic-test.scss */
+/* line 210, tragic-test.scss */
 h1 {
   font-size: 42px; }
 
-/* line 207, tragic-test.scss */
+/* line 214, tragic-test.scss */
 h2 {
   font-size: 36px; }
 
-/* line 211, tragic-test.scss */
+/* line 218, tragic-test.scss */
 h3 {
   font-size: 24px; }
 
-/* line 215, tragic-test.scss */
+/* line 222, tragic-test.scss */
 h4 {
   font-size: 20px; }
 
-/* line 219, tragic-test.scss */
+/* line 226, tragic-test.scss */
 h5 {
   font-size: 18px; }
 
-/* line 223, tragic-test.scss */
+/* line 230, tragic-test.scss */
 h6 {
   font-size: 16px; }
 
+/**************************
+
+    START HEADER 
+    rdl040219
+
+**************************/
 /* HEADER LOGO/NAVIGATION */
-/* line 3, _tragic-header.scss */
+/* line 10, _tragic-header.scss */
+header .container {
+  background: inherit;
+  z-index: 10; }
+  /* line 14, _tragic-header.scss */
+  header .container #navigation {
+    height: 90px;
+    background: inherit; }
+    /* line 18, _tragic-header.scss */
+    header .container #navigation > * {
+      height: 100%;
+      background: inherit; }
+    /* line 23, _tragic-header.scss */
+    header .container #navigation button {
+      width: 30px;
+      height: 24px;
+      padding: 0;
+      border: none;
+      margin: 0;
+      position: absolute;
+      top: calc(50% - 12px);
+      right: 0;
+      background: none;
+      color: inherit;
+      justify-content: space-between;
+      flex-direction: column;
+      cursor: pointer;
+      outline: none;
+      display: none; }
+      /* line 40, _tragic-header.scss */
+      header .container #navigation button span {
+        width: 28px;
+        height: 0;
+        border: 1px solid;
+        color: inherit;
+        display: block;
+        transition: all 0.33s; }
+    /* line 50, _tragic-header.scss */
+    header .container #navigation nav {
+      width: 100%;
+      height: 100%;
+      background: inherit; }
+      /* line 55, _tragic-header.scss */
+      header .container #navigation nav a {
+        margin-left: 38px;
+        white-space: nowrap; }
+      /* line 60, _tragic-header.scss */
+      header .container #navigation nav a:first-of-type {
+        margin-left: 0; }
+  /* line 67, _tragic-header.scss */
+  header .container #header_logo {
+    height: 100%; }
+    /* line 70, _tragic-header.scss */
+    header .container #header_logo a {
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; }
+    /* line 77, _tragic-header.scss */
+    header .container #header_logo img {
+      max-width: 100%;
+      max-height: 100%; }
+
+/* line 84, _tragic-header.scss */
 header .container:first-of-type::after {
   content: '';
   width: 100vw;
@@ -273,104 +349,178 @@ header .container:first-of-type::after {
   transform: translateX(-50%);
   display: block; }
 
-/* line 14, _tragic-header.scss */
-header .container .navigation {
-  height: 90px; }
-  /* line 17, _tragic-header.scss */
-  header .container .navigation > * {
-    height: 100%; }
+/* line 95, _tragic-header.scss */
+header[data-device="tablet"] #navigation,
+header[data-device="mobile"] #navigation {
+  position: relative; }
+  /* line 99, _tragic-header.scss */
+  header[data-device="tablet"] #navigation button,
+  header[data-device="mobile"] #navigation button {
+    display: flex; }
+  /* line 105, _tragic-header.scss */
+  header[data-device="tablet"] #navigation button.active span:nth-child(1),
+  header[data-device="mobile"] #navigation button.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7.5px, 7.5px); }
+  /* line 109, _tragic-header.scss */
+  header[data-device="tablet"] #navigation button.active span:nth-child(2),
+  header[data-device="mobile"] #navigation button.active span:nth-child(2) {
+    opacity: 0; }
+  /* line 113, _tragic-header.scss */
+  header[data-device="tablet"] #navigation button.active span:nth-child(3),
+  header[data-device="mobile"] #navigation button.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7.5px, -7.5px); }
+  /* line 118, _tragic-header.scss */
+  header[data-device="tablet"] #navigation nav,
+  header[data-device="mobile"] #navigation nav {
+    width: 320px;
+    height: auto;
+    border-top: 1px solid #494949;
+    position: absolute;
+    top: 141px;
+    right: -20px;
+    display: block;
+    z-index: 1;
+    transform: translateX(110%);
+    transition: transform 1.2s; }
+    /* line 130, _tragic-header.scss */
+    header[data-device="tablet"] #navigation nav a:first-of-type, header[data-device="tablet"] #navigation nav a,
+    header[data-device="mobile"] #navigation nav a:first-of-type,
+    header[data-device="mobile"] #navigation nav a {
+      margin: 20px 40px;
+      white-space: normal; }
+  /* line 137, _tragic-header.scss */
+  header[data-device="tablet"] #navigation nav.active,
+  header[data-device="mobile"] #navigation nav.active {
+    transform: translateX(0); }
 
-/* line 22, _tragic-header.scss */
-#header_logo {
-  height: 100%; }
-  /* line 25, _tragic-header.scss */
-  #header_logo a {
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; }
-  /* line 32, _tragic-header.scss */
-  #header_logo img {
-    max-width: 100%; }
-
-/* line 37, _tragic-header.scss */
-header nav {
-  width: 100%;
-  height: 100%; }
-  /* line 41, _tragic-header.scss */
-  header nav a {
-    margin-left: 38px;
-    white-space: nowrap; }
-  /* line 46, _tragic-header.scss */
-  header nav a:first-of-type {
-    margin-left: 0; }
+/* line 142, _tragic-header.scss */
+header[data-device="mobile"] #navigation {
+  height: 70px; }
+  /* line 145, _tragic-header.scss */
+  header[data-device="mobile"] #navigation nav {
+    width: 100vw;
+    min-height: calc(100vh - 106px);
+    top: 106px; }
 
 /* HEADER CONTACT */
-/* line 54, _tragic-header.scss */
-header .contact {
-  height: 50px; }
-  /* line 57, _tragic-header.scss */
-  header .contact a {
-    padding: 0 20px;
-    border-left: 1px solid #494949;
+/* line 156, _tragic-header.scss */
+header #contact {
+  height: 50px;
+  white-space: nowrap;
+  transition: all 0.33s; }
+  /* line 161, _tragic-header.scss */
+  header #contact a {
     font-size: 16px;
-    line-height: 30px; }
-  /* line 64, _tragic-header.scss */
-  header .contact a:first-of-type {
-    padding-left: 0;
-    border-left: 0; }
-  /* line 69, _tragic-header.scss */
-  header .contact a:last-of-type {
-    padding-right: 0; }
+    line-height: 30px;
+    white-space: nowrap; }
+    /* line 166, _tragic-header.scss */
+    header #contact a i {
+      display: none;
+      opacity: 0;
+      transition: all 0.5s; }
+  /* line 173, _tragic-header.scss */
+  header #contact a::after {
+    content: attr(data-alt);
+    display: none; }
+  /* line 178, _tragic-header.scss */
+  header #contact .sep {
+    width: 0;
+    height: 30px;
+    margin: 0 20px;
+    border-left: 1px solid #494949; }
 
+/* line 186, _tragic-header.scss */
+header[data-device="tablet"] #contact {
+  justify-content: center; }
+  /* line 189, _tragic-header.scss */
+  header[data-device="tablet"] #contact a {
+    font-size: 14px; }
+
+/* line 194, _tragic-header.scss */
+header[data-device="mobile"] #contact {
+  height: 35px;
+  justify-content: space-evenly; }
+  /* line 198, _tragic-header.scss */
+  header[data-device="mobile"] #contact a {
+    font-size: 0;
+    line-height: 1; }
+    /* line 202, _tragic-header.scss */
+    header[data-device="mobile"] #contact a i {
+      margin-right: 7px;
+      font-size: 10px;
+      display: inline-block;
+      opacity: 1; }
+  /* line 210, _tragic-header.scss */
+  header[data-device="mobile"] #contact a::after {
+    font-size: 10px;
+    display: inline-block; }
+  /* line 215, _tragic-header.scss */
+  header[data-device="mobile"] #contact .sep {
+    height: 20px;
+    margin: 0; }
+
+/**************************
+
+    END HEADER
+
+**************************/
+/**************************
+
+    START HERO SECTION 
+    rdl040219
+
+**************************/
 /* IMAGE & DIMENSIONS */
-/* line 3, _tragic-hero.scss */
+/* line 10, _tragic-hero.scss */
 #main_hero .container {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center; }
-  /* line 9, _tragic-hero.scss */
-  #main_hero .container h1 {
-    transition: font-size 0.33s; }
 
-/* line 14, _tragic-hero.scss */
+/* line 17, _tragic-hero.scss */
 #main_hero[data-device="desktop"] {
   height: 43vw; }
-  /* line 17, _tragic-hero.scss */
+  /* line 20, _tragic-hero.scss */
   #main_hero[data-device="desktop"] h1 {
     margin-bottom: 5vw;
     font-size: 3.6vw;
     line-height: 1.2; }
-    /* line 22, _tragic-hero.scss */
+    /* line 25, _tragic-hero.scss */
     #main_hero[data-device="desktop"] h1 span[class] {
       padding: 0 0.5vw; }
 
-/* line 28, _tragic-hero.scss */
+/* line 31, _tragic-hero.scss */
 #main_hero[data-device="tablet"] {
   height: 80vw; }
-  /* line 31, _tragic-hero.scss */
+  /* line 34, _tragic-hero.scss */
   #main_hero[data-device="tablet"] h1 {
     font-size: 5vw; }
-    /* line 34, _tragic-hero.scss */
+    /* line 37, _tragic-hero.scss */
     #main_hero[data-device="tablet"] h1 span[class] {
       padding: 0 0.75vw; }
 
-/* line 42, _tragic-hero.scss */
+/* line 45, _tragic-hero.scss */
 #main_hero[data-device="mobile"] {
   height: 100vw; }
-  /* line 45, _tragic-hero.scss */
+  /* line 48, _tragic-hero.scss */
   #main_hero[data-device="mobile"] h1 {
     font-size: 6.5vw; }
-    /* line 48, _tragic-hero.scss */
+    /* line 51, _tragic-hero.scss */
     #main_hero[data-device="mobile"] h1 span[class] {
       padding: 0 1vw; }
-    /* line 52, _tragic-hero.scss */
+    /* line 55, _tragic-hero.scss */
     #main_hero[data-device="mobile"] h1 > span {
       text-align: center;
       display: block; }
-    /* line 57, _tragic-hero.scss */
+    /* line 60, _tragic-hero.scss */
     #main_hero[data-device="mobile"] h1 > br {
       display: none; }
+
+/**************************
+
+    END HERO SECTION
+
+**************************/
 
 /*# sourceMappingURL=tragic-test.css.map */

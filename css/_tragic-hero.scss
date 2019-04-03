@@ -1,3 +1,10 @@
+/**************************
+
+    START HERO SECTION 
+    rdl040219
+
+**************************/
+
 /* IMAGE & DIMENSIONS */
 
 #main_hero .container {
@@ -5,10 +12,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    & h1 {
-        transition: font-size 0.33s;
-    }
 }
 
 #main_hero[data-device="desktop"] {
@@ -60,5 +63,9 @@
     }
 }
 
+/**************************
 
+    END HERO SECTION
+
+**************************/
 
