@@ -1,0 +1,64 @@
+/* IMAGE & DIMENSIONS */
+
+#main_hero .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    & h1 {
+        transition: font-size 0.33s;
+    }
+}
+
+#main_hero[data-device="desktop"] {
+    height: 43vw;
+    
+    & h1 {
+        margin-bottom: 5vw;
+        font-size: 3.6vw;
+        line-height: 1.2;
+        
+        & span[class] { 
+            padding: 0 0.5vw;
+        }
+    }
+}
+
+#main_hero[data-device="tablet"] {
+    height: 80vw;
+    
+    & h1 {
+        font-size: 5vw;
+        
+        & span[class] { 
+            padding: 0 0.75vw;
+        }
+    }
+}
+
+
+
+#main_hero[data-device="mobile"] {
+    height: 100vw;
+    
+    & h1 {
+        font-size: 6.5vw;
+        
+        & span[class] { 
+            padding: 0 1vw;
+        }
+        
+        & > span {
+            text-align: center;
+            display: block;
+        }
+        
+        & > br {
+            display:none;
+        }
+    }
+}
+
+
+
