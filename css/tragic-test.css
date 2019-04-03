@@ -481,53 +481,60 @@ header[data-device="mobile"] #contact {
 /* line 10, _tragic-hero.scss */
 #main_hero .container {
   height: 100%;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center; }
-  /* line 16, _tragic-hero.scss */
+  /* line 17, _tragic-hero.scss */
   #main_hero .container #arrow-down {
+    width: 40px;
+    height: 80px;
     position: absolute;
     right: calc(50% - 20px);
     bottom: 30px; }
 
-/* line 23, _tragic-hero.scss */
+/* line 26, _tragic-hero.scss */
 #main_hero[data-device="desktop"] {
   height: 43vw; }
-  /* line 26, _tragic-hero.scss */
+  /* line 29, _tragic-hero.scss */
   #main_hero[data-device="desktop"] h1 {
     margin-bottom: 5vw;
     font-size: 3.6vw;
     line-height: 1.2; }
-    /* line 31, _tragic-hero.scss */
+    /* line 34, _tragic-hero.scss */
     #main_hero[data-device="desktop"] h1 span[class] {
       padding: 0 0.5vw; }
 
-/* line 37, _tragic-hero.scss */
+/* line 40, _tragic-hero.scss */
 #main_hero[data-device="tablet"] {
   height: 80vw; }
-  /* line 40, _tragic-hero.scss */
+  /* line 43, _tragic-hero.scss */
   #main_hero[data-device="tablet"] h1 {
     font-size: 5vw; }
-    /* line 43, _tragic-hero.scss */
+    /* line 46, _tragic-hero.scss */
     #main_hero[data-device="tablet"] h1 span[class] {
       padding: 0 0.75vw; }
 
-/* line 51, _tragic-hero.scss */
+/* line 54, _tragic-hero.scss */
 #main_hero[data-device="mobile"] {
   height: 100vw; }
-  /* line 54, _tragic-hero.scss */
+  /* line 57, _tragic-hero.scss */
   #main_hero[data-device="mobile"] h1 {
     font-size: 6.5vw; }
-    /* line 57, _tragic-hero.scss */
+    /* line 60, _tragic-hero.scss */
     #main_hero[data-device="mobile"] h1 span[class] {
       padding: 0 1vw; }
-    /* line 61, _tragic-hero.scss */
+    /* line 64, _tragic-hero.scss */
     #main_hero[data-device="mobile"] h1 > span {
       text-align: center;
       display: block; }
-    /* line 66, _tragic-hero.scss */
+    /* line 69, _tragic-hero.scss */
     #main_hero[data-device="mobile"] h1 > br {
       display: none; }
+  /* line 74, _tragic-hero.scss */
+  #main_hero[data-device="mobile"] #arrow-down {
+    bottom: 15px;
+    transform: scale(0.75); }
 
 /**************************
 
