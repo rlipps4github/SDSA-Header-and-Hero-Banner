@@ -486,6 +486,26 @@ header[data-device="mobile"] #contact {
   justify-content: center;
   align-items: center; }
   /* line 17, _tragic-hero.scss */
+  #main_hero .container h1 {
+    text-align: center;
+    line-height: 1.25; }
+    /* line 21, _tragic-hero.scss */
+    #main_hero .container h1 span.highlight-psuedo {
+      position: relative;
+      z-index: 10; }
+    /* line 26, _tragic-hero.scss */
+    #main_hero .container h1 span.highlight-psuedo::after {
+      content: '';
+      width: 100%;
+      height: 101%;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      background-color: #DE1D3E;
+      display: block;
+      z-index: -1;
+      transform: translate(-50%, -50%); }
+  /* line 40, _tragic-hero.scss */
   #main_hero .container #arrow-down {
     width: 40px;
     height: 80px;
@@ -493,45 +513,44 @@ header[data-device="mobile"] #contact {
     right: calc(50% - 20px);
     bottom: 30px; }
 
-/* line 26, _tragic-hero.scss */
+/* line 49, _tragic-hero.scss */
 #main_hero[data-device="desktop"] {
   height: 43vw; }
-  /* line 29, _tragic-hero.scss */
+  /* line 52, _tragic-hero.scss */
   #main_hero[data-device="desktop"] h1 {
-    margin-bottom: 5vw;
-    font-size: 3.6vw;
-    line-height: 1.2; }
-    /* line 34, _tragic-hero.scss */
+    margin-bottom: 6.33vw;
+    font-size: 5vw; }
+    /* line 56, _tragic-hero.scss */
     #main_hero[data-device="desktop"] h1 span[class] {
       padding: 0 0.5vw; }
 
-/* line 40, _tragic-hero.scss */
+/* line 62, _tragic-hero.scss */
 #main_hero[data-device="tablet"] {
   height: 80vw; }
-  /* line 43, _tragic-hero.scss */
+  /* line 65, _tragic-hero.scss */
   #main_hero[data-device="tablet"] h1 {
     font-size: 5vw; }
-    /* line 46, _tragic-hero.scss */
+    /* line 68, _tragic-hero.scss */
     #main_hero[data-device="tablet"] h1 span[class] {
       padding: 0 0.75vw; }
 
-/* line 54, _tragic-hero.scss */
+/* line 76, _tragic-hero.scss */
 #main_hero[data-device="mobile"] {
   height: 100vw; }
-  /* line 57, _tragic-hero.scss */
+  /* line 79, _tragic-hero.scss */
   #main_hero[data-device="mobile"] h1 {
     font-size: 6.5vw; }
-    /* line 60, _tragic-hero.scss */
+    /* line 82, _tragic-hero.scss */
     #main_hero[data-device="mobile"] h1 span[class] {
       padding: 0 1vw; }
-    /* line 64, _tragic-hero.scss */
+    /* line 86, _tragic-hero.scss */
     #main_hero[data-device="mobile"] h1 > span {
       text-align: center;
       display: block; }
-    /* line 69, _tragic-hero.scss */
+    /* line 91, _tragic-hero.scss */
     #main_hero[data-device="mobile"] h1 > br {
       display: none; }
-  /* line 74, _tragic-hero.scss */
+  /* line 96, _tragic-hero.scss */
   #main_hero[data-device="mobile"] #arrow-down {
     bottom: 15px;
     transform: scale(0.75); }
