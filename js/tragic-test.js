@@ -7,19 +7,22 @@ off-grid placements
 
 function customResponse() {
     // get lower breakpoints excluding padding
-    const deviceArray = {tablet: 992, mobile: 600}
+    let deviceArray = {tablet: 992, mobile: 600}
     // get all responsive containers
-    const responsiveElements = document.querySelectorAll('[data-device]')
-    switch (true) {
-        case window.innerWidth > deviceArray['tablet']: 
-            responsiveElements.forEach( (e) => { e.setAttribute('data-device', 'desktop') })
-            break
-        case window.innerWidth > deviceArray['mobile']:
-            responsiveElements.forEach( (e) => { e.setAttribute('data-device', 'tablet') })
-            break
-        default:
-            responsiveElements.forEach( (e) => { e.setAttribute('data-device', 'mobile') })
-    } 
+    let responsiveElements = document.querySelectorAll('[data-device]')
+    responsiveElements.forEach( (e) => { 
+        let thisWidth = e.offsetWidth
+        switch (true) {
+            case thisWidth > deviceArray['tablet']: 
+                e.setAttribute('data-device', 'desktop')
+                break
+            case thisWidth > deviceArray['mobile']:
+                e.setAttribute('data-device', 'tablet')
+                break
+            default:
+                e.setAttribute('data-device', 'mobile')
+        } 
+    })
 }
 
 

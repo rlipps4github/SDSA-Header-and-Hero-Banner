@@ -55,10 +55,15 @@ header .container {
             & a {
                 margin-left: 38px;
                 white-space: nowrap;
+                transition: transform 0.15s;
             }
 
             & a:first-of-type {
                 margin-left: 0;
+            }
+
+            & a:hover {
+                transform: scale(1.1);
             }
 
         }
@@ -168,6 +173,10 @@ header #contact {
             opacity: 0;
             transition: all 0.5s;
         }
+    }
+
+    & a:hover {
+        transform: scale(1.1);
     }
     
     & a::after {

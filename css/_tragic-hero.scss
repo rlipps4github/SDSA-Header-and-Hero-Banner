@@ -12,6 +12,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    & #arrow-down{
+        position: absolute;
+        right: calc(50% - 20px);
+        bottom: 30px;
+    }
 }
 
 #main_hero[data-device="desktop"] {
