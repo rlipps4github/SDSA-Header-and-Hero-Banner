@@ -235,36 +235,35 @@ body[data-loaded="true"] {
 
 /* line 199, tragic-test.scss */
 section {
-  width: 100%;
-  float: left; }
+  width: 100%; }
 
-/* line 204, tragic-test.scss */
+/* line 203, tragic-test.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: "Bebas Neue", Impact, sans-serif;
   font-weight: 400; }
 
-/* line 210, tragic-test.scss */
+/* line 209, tragic-test.scss */
 h1 {
   font-size: 42px; }
 
-/* line 214, tragic-test.scss */
+/* line 213, tragic-test.scss */
 h2 {
   font-size: 36px; }
 
-/* line 218, tragic-test.scss */
+/* line 217, tragic-test.scss */
 h3 {
   font-size: 24px; }
 
-/* line 222, tragic-test.scss */
+/* line 221, tragic-test.scss */
 h4 {
   font-size: 20px; }
 
-/* line 226, tragic-test.scss */
+/* line 225, tragic-test.scss */
 h5 {
   font-size: 18px; }
 
-/* line 230, tragic-test.scss */
+/* line 229, tragic-test.scss */
 h6 {
   font-size: 16px; }
 
@@ -381,87 +380,95 @@ header[data-device="mobile"] #navigation {
     border-top: 1px solid #494949;
     position: absolute;
     top: 141px;
-    right: -20px;
+    right: -100%;
     display: block;
-    z-index: 1;
-    transform: translateX(110%);
-    transition: transform 1.2s; }
-    /* line 135, _tragic-header.scss */
+    z-index: 200;
+    overflow: hidden;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: right 0.5s, transform 0.25s .25s; }
+    /* line 137, _tragic-header.scss */
     header[data-device="tablet"] #navigation nav a:first-of-type, header[data-device="tablet"] #navigation nav a,
     header[data-device="mobile"] #navigation nav a:first-of-type,
     header[data-device="mobile"] #navigation nav a {
+      min-width: 240px;
       margin: 20px 40px;
-      white-space: normal; }
-  /* line 142, _tragic-header.scss */
+      white-space: normal;
+      transition: transform 0.5s, right 0.15s .35s; }
+  /* line 146, _tragic-header.scss */
   header[data-device="tablet"] #navigation nav.active,
   header[data-device="mobile"] #navigation nav.active {
-    transform: translateX(0); }
+    right: -20px;
+    overflow: visible;
+    transform: scaleX(1); }
 
-/* line 147, _tragic-header.scss */
+/* line 153, _tragic-header.scss */
 header[data-device="mobile"] #navigation {
   height: 70px; }
-  /* line 150, _tragic-header.scss */
+  /* line 156, _tragic-header.scss */
   header[data-device="mobile"] #navigation nav {
-    width: 100vw;
     min-height: calc(100vh - 106px);
     top: 106px; }
+  /* line 161, _tragic-header.scss */
+  header[data-device="mobile"] #navigation nav.active {
+    width: 100vw; }
 
 /* HEADER CONTACT */
-/* line 161, _tragic-header.scss */
+/* line 170, _tragic-header.scss */
 header #contact {
   height: 50px;
   white-space: nowrap;
   transition: all 0.33s; }
-  /* line 166, _tragic-header.scss */
+  /* line 175, _tragic-header.scss */
   header #contact a {
     font-size: 16px;
     line-height: 30px;
     white-space: nowrap; }
-    /* line 171, _tragic-header.scss */
+    /* line 180, _tragic-header.scss */
     header #contact a i {
       display: none;
       opacity: 0;
       transition: all 0.5s; }
-  /* line 178, _tragic-header.scss */
+  /* line 187, _tragic-header.scss */
   header #contact a:hover {
     transform: scale(1.1); }
-  /* line 182, _tragic-header.scss */
+  /* line 191, _tragic-header.scss */
   header #contact a::after {
     content: attr(data-alt);
     display: none; }
-  /* line 187, _tragic-header.scss */
+  /* line 196, _tragic-header.scss */
   header #contact .sep {
     width: 0;
     height: 30px;
     margin: 0 20px;
     border-left: 1px solid #494949; }
 
-/* line 195, _tragic-header.scss */
+/* line 204, _tragic-header.scss */
 header[data-device="tablet"] #contact {
   justify-content: center; }
-  /* line 198, _tragic-header.scss */
+  /* line 207, _tragic-header.scss */
   header[data-device="tablet"] #contact a {
     font-size: 14px; }
 
-/* line 203, _tragic-header.scss */
+/* line 212, _tragic-header.scss */
 header[data-device="mobile"] #contact {
   height: 35px;
   justify-content: space-evenly; }
-  /* line 207, _tragic-header.scss */
+  /* line 216, _tragic-header.scss */
   header[data-device="mobile"] #contact a {
     font-size: 0;
     line-height: 1; }
-    /* line 211, _tragic-header.scss */
+    /* line 220, _tragic-header.scss */
     header[data-device="mobile"] #contact a i {
       margin-right: 7px;
       font-size: 10px;
       display: inline-block;
       opacity: 1; }
-  /* line 219, _tragic-header.scss */
+  /* line 228, _tragic-header.scss */
   header[data-device="mobile"] #contact a::after {
     font-size: 10px;
     display: inline-block; }
-  /* line 224, _tragic-header.scss */
+  /* line 233, _tragic-header.scss */
   header[data-device="mobile"] #contact .sep {
     height: 20px;
     margin: 0; }

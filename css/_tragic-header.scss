@@ -126,21 +126,27 @@ header[data-device="mobile"] #navigation {
         border-top: 1px solid $dark2;
         position: absolute;
         top: 141px;
-        right: -20px;
+        right: -100%;
         display: block;
-        z-index: 1;
-        transform: translateX(110%);
-        transition: transform 1.2s;
+        z-index: 200;
+        overflow: hidden;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: right 0.5s, transform 0.25s .25s;
 
         & a:first-of-type,
         & a {
+            min-width: 240px;
             margin: 20px 40px;
             white-space: normal;
+            transition: transform 0.5s, right 0.15s .35s;
         }
     }
 
     & nav.active {
-        transform: translateX(0);
+        right: -20px;
+        overflow: visible;
+        transform: scaleX(1);
     }
 }
 
@@ -148,9 +154,12 @@ header[data-device="mobile"] #navigation {
     height: 70px;
 
     & nav {
-        width: 100vw;
         min-height: calc(100vh - 106px);
         top: 106px;
+    }
+
+    & nav.active {
+        width: 100vw;
     }
 }
 
